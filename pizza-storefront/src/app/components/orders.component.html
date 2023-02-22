@@ -1,0 +1,16 @@
+<mat-card *ngFor="let o of orders" class="border">
+    <mat-card-content>
+      <p>
+        OrderId : <span>{{ o.orderId }}</span>
+      </p>
+      <p>
+        Price : <span>{{ o.amount }}</span>
+      </p>
+    </mat-card-content>
+</mat-card>
+
+<div *ngIf="!orders">
+    <mat-card-content>
+        <span>No orders retrieved</span>
+    </mat-card-content>
+</div>
